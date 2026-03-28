@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciro Esposito | Macchine per la Lavorazione del Ferro</title>
+  <meta name="description" content="Agente plurimandatario specializzato nella vendita di macchine utensili e impianti per la lavorazione del ferro. Assistenza tecnica e consulenza personalizzata." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-gear"></i></span>
+        <span class="logo-text">
+          <!-- SOSTITUIRE CON NOME E COGNOME -->
+          Ciro <strong>Esposito</strong>
+        </span>
+      </a>
+      <nav id="nav">
+        <ul>
+          <li><a href="#chi-siamo">Chi Siamo</a></li>
+          <li><a href="#prodotti">Prodotti</a></li>
+          <li><a href="#marchi">Marchi</a></li>
+          <li><a href="#ercolina">Ercolina</a></li>
+          <li><a href="#contatti" class="btn-nav">Contatti</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-shield-halved"></i>
+        Agente Plurimandatario Certificato
+      </div>
+      <h1 class="hero-title">
+        Macchine per la<br />
+        <span class="text-accent">Lavorazione del Ferro</span>
+      </h1>
+      <p class="hero-subtitle">
+        Consulenza professionale e vendita di macchine utensili, impianti per la lavorazione della lamiera, curvatubi e profili.
+        Il partner di fiducia per officine, carpenterie metalliche e aziende manifatturiere.
+      </p>
+      <div class="hero-cta">
+        <a href="#contatti" class="btn btn-primary">
+          <i class="fa-solid fa-phone"></i> Richiedi un Preventivo
+        </a>
+        <a href="#prodotti" class="btn btn-secondary">
+          <i class="fa-solid fa-list"></i> Scopri i Prodotti
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Anni di Esperienza</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Marchi Rappresentati</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Clienti Soddisfatti</span>
+        </div>
+      </div>
+    </div>
+    <a href="#chi-siamo" class="scroll-down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== MARCHI CAROUSEL ===== -->
+  <section id="marchi" class="section-brands">
+    <div class="container">
+      <p class="brands-label">Marchi che rappresentiamo</p>
+    </div>
+    <div class="brands-track-wrapper">
+      <div class="brands-track" id="brandsTrack">
+        <!-- duplicated for infinite loop -->
+        <div class="brand-item"><img src="img/ercolina-logo.svg" alt="Ercolina" onerror="this.parentNode.innerHTML='<span class=brand-text>Ercolina</span>'" /></div>
+        <div class="brand-item"><span class="brand-text">Ficep</span></div>
+        <div class="brand-item"><span class="brand-text">Euromac</span></div>
+        <div class="brand-item"><span class="brand-text">BLM Group</span></div>
+        <div class="brand-item"><span class="brand-text">Durma</span></div>
+        <div class="brand-item"><span class="brand-text">Cidan</span></div>
+        <div class="brand-item"><span class="brand-text">Haco</span></div>
+        <div class="brand-item"><span class="brand-text">Ermaksan</span></div>
+        <div class="brand-item"><span class="brand-text">Cormak</span></div>
+        <div class="brand-item"><span class="brand-text">Farina</span></div>
+        <div class="brand-item"><span class="brand-text">Sahinler</span></div>
+        <div class="brand-item"><span class="brand-text">Nargesa</span></div>
+        <!-- duplicate set -->
+        <div class="brand-item"><span class="brand-text">Ercolina</span></div>
+        <div class="brand-item"><span class="brand-text">Ficep</span></div>
+        <div class="brand-item"><span class="brand-text">Euromac</span></div>
+        <div class="brand-item"><span class="brand-text">BLM Group</span></div>
+        <div class="brand-item"><span class="brand-text">Durma</span></div>
+        <div class="brand-item"><span class="brand-text">Cidan</span></div>
+        <div class="brand-item"><span class="brand-text">Haco</span></div>
+        <div class="brand-item"><span class="brand-text">Ermaksan</span></div>
+        <div class="brand-item"><span class="brand-text">Cormak</span></div>
+        <div class="brand-item"><span class="brand-text">Farina</span></div>
+        <div class="brand-item"><span class="brand-text">Sahinler</span></div>
+        <div class="brand-item"><span class="brand-text">Nargesa</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHI SIAMO ===== -->
+  <section id="chi-siamo" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-placeholder">
+            <i class="fa-solid fa-industry"></i>
+            <div class="about-shape-1"></div>
+            <div class="about-shape-2"></div>
+          </div>
+          <div class="about-card-float">
+            <i class="fa-solid fa-handshake"></i>
+            <div>
+              <strong>Consulenza Diretta</strong>
+              <p>Sempre al tuo fianco</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-tag">Chi Siamo</span>
+          <h2 class="section-title">Il tuo agente di fiducia<br /><span class="text-accent">nel settore metalmeccanico</span></h2>
+          <p>
+            <!-- PERSONALIZZARE CON TESTO REALE -->
+            Con oltre vent'anni di esperienza nel settore delle macchine utensili, sono specializzato nella consulenza e nella vendita di impianti per la lavorazione del ferro, della lamiera e dei profili metallici.
+          </p>
+          <p>
+            Come agente plurimandatario, rappresento i migliori costruttori italiani ed europei, offrendo sempre la soluzione più adatta alle specifiche esigenze produttive di ogni cliente.
+            Seguo personalmente ogni trattativa, dal primo sopralluogo fino alla consegna e alla messa in opera della macchina.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Consulenza tecnica gratuita</span>
+            </div>
+            <div class="about-feature">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Assistenza post-vendita</span>
+            </div>
+            <div class="about-feature">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Macchine nuove e usate</span>
+            </div>
+            <div class="about-feature">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Finanziamenti e leasing</span>
+            </div>
+          </div>
+          <a href="#contatti" class="btn btn-primary">Contattami</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODOTTI ===== -->
+  <section id="prodotti" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Catalogo</span>
+        <h2 class="section-title">I Nostri <span class="text-accent">Prodotti</span></h2>
+        <p class="section-subtitle">Una gamma completa di macchine per ogni esigenza di lavorazione del metallo</p>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-icon">
+            <i class="fa-solid fa-compress"></i>
+          </div>
+          <h3>Piegatrici per Lamiera</h3>
+          <p>Piegatrici a bordo libero CNC, piegatrici universali e pannellatrici per la piegatura della lamiera con alta precisione.</p>
+          <ul>
+            <li>Piegatrici CNC</li>
+            <li>Pannellatrici</li>
+            <li>Piegatrici universali</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-icon">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <h3>Cesoie &amp; Troncatrici</h3>
+          <p>Cesoie a ghigliottina idrauliche e meccaniche, troncatrici a nastro e circolari per taglio preciso di lamiere e profilati.</p>
+          <ul>
+            <li>Cesoie a ghigliottina</li>
+            <li>Troncatrici a nastro</li>
+            <li>Segatrici circolari</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="product-icon">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <h3>Curvatubi &amp; Curvaprofile</h3>
+          <p>Macchine per la curvatura e deformazione di tubi, barre e profili. Specializzati nei prodotti Ercolina, leader mondiale del settore.</p>
+          <ul>
+            <li>Curvatubi CNC</li>
+            <li>Curvaprofile a rulli</li>
+            <li>Arrotondatrici</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-icon">
+            <i class="fa-solid fa-hammer"></i>
+          </div>
+          <h3>Punzonatrici</h3>
+          <p>Punzonatrici idrauliche, combinate punzone-cesoie e centri di punzonatura CNC per fori e forme su lamiera.</p>
+          <ul>
+            <li>Punzonatrici idrauliche</li>
+            <li>Combinate punch-shear</li>
+            <li>Centri CNC</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="product-icon">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3>Saldatrici &amp; Taglio</h3>
+          <p>Sistemi di saldatura MIG/MAG, TIG, plasma e laser. Tavoli di saldatura, posizionatori e automazioni per la saldatura.</p>
+          <ul>
+            <li>Saldatrici MIG/MAG/TIG</li>
+            <li>Taglio plasma e laser</li>
+            <li>Posizionatori</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <h3>Calandre &amp; Calandra Lamiera</h3>
+          <p>Calandre a 3 e 4 rulli per la formatura di cilindri, coni e forme curve da lamiera e profili.</p>
+          <ul>
+            <li>Calandre a 3 rulli</li>
+            <li>Calandre a 4 rulli CNC</li>
+            <li>Calandre per profili</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-icon">
+            <i class="fa-solid fa-ruler-combined"></i>
+          </div>
+          <h3>Profilatrici &amp; Pressa</h3>
+          <p>Presse idrauliche, eccentriche e profilatrici a freddo per la formatura di profili speciali in acciaio e alluminio.</p>
+          <ul>
+            <li>Presse idrauliche</li>
+            <li>Profilatrici a rulli</li>
+            <li>Presse eccentriche</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="product-icon">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3>Macchine per Officina</h3>
+          <p>Torni, fresatrici, trapani a colonna, rettificatrici e centri di lavoro CNC per officine meccaniche e carpenterie.</p>
+          <ul>
+            <li>Torni CNC e tradizionali</li>
+            <li>Fresatrici</li>
+            <li>Centri di lavoro CNC</li>
+          </ul>
+          <a href="#contatti" class="product-link">Richiedi info <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ERCOLINA FEATURE ===== -->
+  <section id="ercolina" class="section section-ercolina">
+    <div class="ercolina-bg">
+      <div class="ercolina-pattern"></div>
+    </div>
+    <div class="container">
+      <div class="ercolina-grid">
+        <div class="ercolina-text">
+          <div class="ercolina-badge">Partner Ufficiale</div>
+          <h2 class="ercolina-title">
+            <span class="ercolina-logo-text">Ercolina<span class="reg">®</span></span>
+            <br />Curvatubi &amp; Macchine<br />per Deformazione
+          </h2>
+          <p>
+            Ercolina è il marchio di riferimento mondiale per le macchine di curvatura e deformazione di tubi, barre e profili metallici.
+            Prodotti in Italia con tecnologia all'avanguardia, rappresentano il top di gamma per qualità, affidabilità e precisione.
+          </p>
+          <p>
+            Come agente autorizzato, posso offrire consulenza specializzata, demo in loco e assistenza tecnica completa su tutta la gamma Ercolina.
+          </p>
+          <div class="ercolina-features">
+            <div class="e-feature">
+              <i class="fa-solid fa-medal"></i>
+              <div>
+                <strong>Made in Italy</strong>
+                <p>Qualità e precisione italiane</p>
+              </div>
+            </div>
+            <div class="e-feature">
+              <i class="fa-solid fa-microchip"></i>
+              <div>
+                <strong>Controllo CNC</strong>
+                <p>Automazione e ripetibilità</p>
+              </div>
+            </div>
+            <div class="e-feature">
+              <i class="fa-solid fa-wrench"></i>
+              <div>
+                <strong>Assistenza Tecnica</strong>
+                <p>Supporto diretto e ricambi</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contatti" class="btn btn-accent">Richiedi Demo Ercolina</a>
+        </div>
+        <div class="ercolina-visual">
+          <div class="ercolina-machine-card">
+            <div class="machine-icon-big">
+              <i class="fa-solid fa-circle-nodes"></i>
+            </div>
+            <div class="machine-specs">
+              <h4>Gamma Prodotti Ercolina</h4>
+              <div class="spec-list">
+                <div class="spec-item">
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <span>Curvatubi idraulici e manuali</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <span>Curvaprofile a 3 e 4 rulli</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <span>Arrotondatrici per barre</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <span>Saldatrici da cantiere</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <span>Tagliaferro e stiratubi</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <span>Modelli CNC con controllo numerico</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ercolina-badge-float">
+            <i class="fa-solid fa-star"></i>
+            Leader mondiale nella curvatura di tubi e profili
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERCHÉ SCEGLIERCI ===== -->
+  <section class="section section-why">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Il Nostro Valore</span>
+        <h2 class="section-title">Perché Sceglierci</h2>
+        <p class="section-subtitle">La differenza tra un venditore e un vero partner tecnico</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number">01</div>
+          <i class="fa-solid fa-magnifying-glass why-icon"></i>
+          <h3>Analisi delle Esigenze</h3>
+          <p>Prima di proporre qualsiasi macchina, analizzo la tua produzione per capire esattamente cosa serve. Nessuna vendita "a tutti i costi".</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">02</div>
+          <i class="fa-solid fa-people-arrows why-icon"></i>
+          <h3>Relazione Diretta</h3>
+          <p>Parli sempre con me, non con un call center. Rispondo personalmente a ogni richiesta, dal preventivo alla consegna.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">03</div>
+          <i class="fa-solid fa-tags why-icon"></i>
+          <h3>Plurimandatario</h3>
+          <p>Non sono vincolato a un solo costruttore: scelgo tra 15+ marchi per trovare la macchina giusta al prezzo giusto per te.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">04</div>
+          <i class="fa-solid fa-headset why-icon"></i>
+          <h3>Supporto Post-Vendita</h3>
+          <p>L'assistenza non finisce con la consegna. Sono disponibile per formazione, ricambi e interventi tecnici.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATTI ===== -->
+  <section id="contatti" class="section section-dark section-contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contatti</span>
+        <h2 class="section-title">Parliamo del tuo <span class="text-accent">Progetto</span></h2>
+        <p class="section-subtitle">Compila il modulo o contattami direttamente per un preventivo gratuito</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-info-card">
+            <h3>Informazioni di Contatto</h3>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="contact-label">Telefono / WhatsApp</span>
+                <!-- SOSTITUIRE CON NUMERO REALE -->
+                <a href="tel:+393331234567">+39 333 123 4567</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <!-- SOSTITUIRE CON EMAIL REALE -->
+                <a href="mailto:info@esempio.it">info@esempio.it</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="contact-label">Zona di Operatività</span>
+                <!-- SOSTITUIRE CON ZONA REALE -->
+                <span>Campania e Sud Italia</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <span class="contact-label">Orari</span>
+                <span>Lun – Ven: 8:30 – 18:30</span>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome e Cognome *</label>
+                <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required />
+              </div>
+              <div class="form-group">
+                <label for="azienda">Azienda</label>
+                <input type="text" id="azienda" name="azienda" placeholder="Nome azienda" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono">Telefono *</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+39 333 000 0000" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="mario@esempio.it" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="interesse">Tipo di macchina di interesse</label>
+              <select id="interesse" name="interesse">
+                <option value="">Seleziona una categoria...</option>
+                <option>Piegatrici per lamiera</option>
+                <option>Cesoie / Troncatrici</option>
+                <option>Curvatubi / Curvaprofile (Ercolina)</option>
+                <option>Punzonatrici</option>
+                <option>Calandre</option>
+                <option>Saldatrici / Taglio</option>
+                <option>Macchine per officina</option>
+                <option>Altro / Non so ancora</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="messaggio">Messaggio *</label>
+              <textarea id="messaggio" name="messaggio" rows="4" placeholder="Descrivi la tua esigenza, la lavorazione che devi fare, i materiali e le dimensioni..." required></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy">Ho letto e accetto la <a href="#">Privacy Policy</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-solid fa-paper-plane"></i> Invia Richiesta
+            </button>
+            <div id="formSuccess" class="form-success" style="display:none;">
+              <i class="fa-solid fa-circle-check"></i>
+              Grazie! La tua richiesta è stata inviata. Ti contatterò a breve.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo logo-footer">
+          <span class="logo-icon"><i class="fa-solid fa-gear"></i></span>
+          <span class="logo-text">Ciro <strong>Esposito</strong></span>
+        </a>
+        <p>Agente plurimandatario specializzato nella vendita di macchine utensili per la lavorazione del ferro e dei metalli.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigazione</h4>
+        <ul>
+          <li><a href="#chi-siamo">Chi Siamo</a></li>
+          <li><a href="#prodotti">Prodotti</a></li>
+          <li><a href="#marchi">Marchi</a></li>
+          <li><a href="#ercolina">Ercolina</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Prodotti</h4>
+        <ul>
+          <li><a href="#prodotti">Piegatrici</a></li>
+          <li><a href="#prodotti">Cesoie</a></li>
+          <li><a href="#prodotti">Curvatubi</a></li>
+          <li><a href="#prodotti">Punzonatrici</a></li>
+          <li><a href="#prodotti">Calandre</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contatti Rapidi</h4>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+393331234567">+39 333 123 4567</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@esempio.it">info@esempio.it</a></p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Ciro Esposito – Agente di Commercio. P.IVA: <!-- INSERIRE P.IVA --> | <a href="#">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/393331234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contattaci su WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
