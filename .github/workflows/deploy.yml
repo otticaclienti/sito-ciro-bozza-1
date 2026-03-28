@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - claude/iron-machinery-website-Fckfi
+  workflow_dispatch:
 
 permissions:
   contents: read
