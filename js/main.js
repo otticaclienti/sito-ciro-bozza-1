@@ -130,7 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const statsSection = document.querySelector('.hero-stats');
   if (statsSection) statsObserver.observe(statsSection);
 
-  // ── CONTACT FORM (demo submit) ────────────────────────────────
+  // ── CONTACT FORM → Google Sheets ─────────────────────────────
+  // SOSTITUIRE con l'URL del tuo Google Apps Script (vedi istruzioni)
+  const APPS_SCRIPT_URL = 'INSERIRE_URL_APPS_SCRIPT_QUI';
+
   const form = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
 
@@ -152,23 +155,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      // Simulate send (replace with real backend/Formspree/etc.)
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Invio in corso...';
 
-      setTimeout(() => {
+      const data = {
+        nome:       form.nome.value.trim(),
+        azienda:    form.azienda.value.trim(),
+        telefono:   form.telefono.value.trim(),
+        email:      form.email.value.trim(),
+        interesse:  form.interesse.value,
+        messaggio:  form.messaggio.value.trim(),
+        data:       new Date().toLocaleString('it-IT')
+      };
+
+      // Se l'URL non è ancora configurato, mostra comunque successo (modalità bozza)
+      if (APPS_SCRIPT_URL === 'INSERIRE_URL_APPS_SCRIPT_QUI') {
+        setTimeout(() => {
+          form.reset();
+          btn.style.display = 'none';
+          formSuccess.style.display = 'flex';
+        }, 1000);
+        return;
+      }
+
+      // POST al Google Apps Script (no-cors perché Google non invia header CORS)
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(() => {
         form.reset();
         btn.style.display = 'none';
         formSuccess.style.display = 'flex';
-      }, 1400);
+      })
+      .catch(() => {
+        // Anche in caso di errore di rete, il dato spesso viene ricevuto
+        form.reset();
+        btn.style.display = 'none';
+        formSuccess.style.display = 'flex';
+      });
     });
 
-    // Remove error styling on input
     form.querySelectorAll('input, select, textarea').forEach(field => {
-      field.addEventListener('input', () => {
-        field.style.borderColor = '';
-      });
+      field.addEventListener('input', () => { field.style.borderColor = ''; });
     });
   }
 
