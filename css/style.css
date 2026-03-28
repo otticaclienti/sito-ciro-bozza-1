@@ -505,6 +505,21 @@ img { max-width: 100%; display: block; }
   transition: all var(--transition);
 }
 
+.brand-logo {
+  height: 40px;
+  width: auto;
+  max-width: 160px;
+  opacity: 0.6;
+  filter: brightness(0) invert(1);
+  transition: opacity var(--transition), filter var(--transition);
+  display: block;
+}
+
+.brand-item:hover .brand-logo {
+  opacity: 1;
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(350deg);
+}
+
 .brand-text {
   font-family: var(--font-title);
   font-size: 1.3rem;
@@ -514,10 +529,6 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   transition: color var(--transition);
   white-space: nowrap;
-}
-
-.brands-track:hover .brand-item .brand-text {
-  color: var(--color-text-muted);
 }
 
 .brand-item:hover .brand-text {
