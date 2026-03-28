@@ -179,11 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // POST al Google Apps Script (no-cors perché Google non invia header CORS)
+      // POST al Google Apps Script
+      // Usiamo text/plain per evitare il preflight CORS (limitazione Google)
       fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify(data)
       })
       .then(() => {
