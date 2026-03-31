@@ -62,23 +62,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('#nav a[href^="#"]');
 
-  const observerNav = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.classList.remove('active-nav');
-            if (link.getAttribute('href') === '#' + entry.target.id) {
-              link.classList.add('active-nav');
-            }
-          });
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+  // Attiva il link nav in base alla sezione più vicina al centro dello schermo
+  const updateActiveNav = () => {
+    const scrollY = window.scrollY + window.innerHeight * 0.35;
+    let current = '';
+    sections.forEach(section => {
+      if (section.offsetTop <= scrollY) {
+        current = section.id;
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active-nav');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active-nav');
+      }
+    });
+  };
 
-  sections.forEach(section => observerNav.observe(section));
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
 
   // ── AOS (Animate On Scroll) – lightweight inline ──────────────
   const aosElements = document.querySelectorAll('[data-aos]');
