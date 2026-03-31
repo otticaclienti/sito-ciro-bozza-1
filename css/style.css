@@ -172,6 +172,20 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow-green);
 }
 
+.btn-green {
+  background: var(--color-green);
+  color: #fff;
+  border: 2px solid var(--color-green);
+}
+
+.btn-green:hover {
+  background: var(--color-green-hover);
+  border-color: var(--color-green-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-green);
+}
+
 .btn-full { width: 100%; justify-content: center; }
 
 /* ============================================
