@@ -1589,3 +1589,160 @@ img { max-width: 100%; display: block; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ============================================
+   ELEMENTI DECORATIVI
+   ============================================ */
+
+/* Aggiorna glow hero con colori corretti */
+.hero-glow-1 {
+  background: radial-gradient(circle, rgba(240,112,0,0.45), transparent 70%);
+}
+.hero-glow-2 {
+  background: radial-gradient(circle, rgba(53,119,72,0.35), transparent 70%);
+}
+
+/* Cerchi decorativi generici */
+.deco {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.deco-o { background: var(--color-orange); }
+.deco-g { background: var(--color-green); }
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%       { transform: translateY(-18px) rotate(4deg); }
+  66%       { transform: translateY(10px) rotate(-3deg); }
+}
+@keyframes float-med {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-22px) scale(1.06); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes pulse-deco {
+  0%, 100% { opacity: 0.07; transform: scale(1); }
+  50%       { opacity: 0.13; transform: scale(1.08); }
+}
+
+/* ── Chi Siamo decorators ── */
+#chi-siamo { overflow: hidden; }
+
+#chi-siamo .deco-1 {
+  width: 320px; height: 320px;
+  top: -80px; right: -80px;
+  opacity: 0.06;
+  animation: float-slow 12s ease-in-out infinite;
+}
+#chi-siamo .deco-2 {
+  width: 160px; height: 160px;
+  bottom: 40px; left: -40px;
+  opacity: 0.07;
+  animation: float-med 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
+#chi-siamo .deco-3 {
+  width: 60px; height: 60px;
+  top: 30%; right: 12%;
+  opacity: 0.1;
+  border-radius: 12px;
+  transform: rotate(20deg);
+  animation: spin-slow 18s linear infinite;
+}
+
+/* ── Prodotti decorators ── */
+#prodotti { overflow: hidden; }
+
+#prodotti .deco-1 {
+  width: 400px; height: 400px;
+  top: -120px; left: -100px;
+  opacity: 0.05;
+  animation: pulse-deco 10s ease-in-out infinite;
+}
+#prodotti .deco-2 {
+  width: 200px; height: 200px;
+  bottom: -60px; right: -60px;
+  opacity: 0.06;
+  animation: float-med 13s ease-in-out infinite;
+  animation-delay: -5s;
+}
+#prodotti .deco-3 {
+  width: 80px; height: 80px;
+  top: 20%; right: 5%;
+  opacity: 0.08;
+  border-radius: 16px;
+  animation: spin-slow 22s linear infinite reverse;
+}
+
+/* ── Ercolina decorators ── */
+#ercolina { overflow: hidden; }
+
+#ercolina .deco-1 {
+  width: 350px; height: 350px;
+  top: -100px; right: -80px;
+  opacity: 0.06;
+  animation: float-slow 14s ease-in-out infinite;
+}
+#ercolina .deco-2 {
+  width: 120px; height: 120px;
+  bottom: 30px; left: 8%;
+  opacity: 0.09;
+  animation: pulse-deco 8s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+/* ── Contatti decorators ── */
+#contatti { overflow: hidden; }
+
+#contatti .deco-1 {
+  width: 500px; height: 500px;
+  top: -150px; right: -150px;
+  opacity: 0.05;
+  animation: float-slow 16s ease-in-out infinite;
+}
+#contatti .deco-2 {
+  width: 180px; height: 180px;
+  bottom: -50px; left: 10%;
+  opacity: 0.07;
+  animation: float-med 11s ease-in-out infinite;
+  animation-delay: -4s;
+}
+#contatti .deco-3 {
+  width: 70px; height: 70px;
+  top: 15%; left: 35%;
+  opacity: 0.06;
+  border-radius: 14px;
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Griglia di punti sottile sui prodotti */
+#prodotti::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(240,112,0,0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+#prodotti .container { position: relative; z-index: 1; }
+
+/* Linea animata in cima al footer */
+footer::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-orange), var(--color-green), var(--color-orange));
+  background-size: 200% 100%;
+  animation: gradient-slide 4s linear infinite;
+}
+@keyframes gradient-slide {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
