@@ -1504,10 +1504,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Section title underline ── */
-.section-title {
-  position: relative;
-  display: inline-block;
-}
 .section-title::after {
   content: '';
   display: block;
@@ -1516,7 +1512,13 @@ img { max-width: 100%; display: block; }
   background: var(--color-orange);
   border-radius: 2px;
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
   transition: width 0.7s ease 0.2s;
+}
+.about-text .section-title::after {
+  margin-left: 0;
+  margin-right: auto;
 }
 .section-title.aos-animate::after,
 .section-title.title-animated::after {
