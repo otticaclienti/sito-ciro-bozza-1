@@ -1747,19 +1747,6 @@ img { max-width: 100%; display: block; }
 }
 #prodotti .container { position: relative; z-index: 1; }
 
-/* Linea animata in cima al footer */
-footer::before {
-  content: '';
-  display: block;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-orange), var(--color-green), var(--color-orange));
-  background-size: 200% 100%;
-  animation: gradient-slide 4s linear infinite;
-}
-@keyframes gradient-slide {
-  0%   { background-position: 0% 0%; }
-  100% { background-position: 200% 0%; }
-}
 
 /* ── Titoli in verde ── */
 .section-title,
