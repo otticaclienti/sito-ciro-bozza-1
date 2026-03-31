@@ -1760,3 +1760,13 @@ footer::before {
   0%   { background-position: 0% 0%; }
   100% { background-position: 200% 0%; }
 }
+
+/* ── Titoli in verde ── */
+.section-title,
+.product-card h3,
+.ercolina-title,
+.machine-specs h4,
+.why-card h3,
+.contact-info-card h3 {
+  color: var(--color-green);
+}
