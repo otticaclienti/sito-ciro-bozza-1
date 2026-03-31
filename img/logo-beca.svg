@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="340" height="100">
+  <!-- Orange square -->
+  <rect x="0" y="4" width="92" height="92" rx="10" fill="#E8771A"/>
+  <!-- White crescent shape: large white circle minus orange overlap -->
+  <circle cx="44" cy="52" r="30" fill="white"/>
+  <circle cx="55" cy="41" r="22" fill="#E8771A"/>
+  <!-- Small white dot (head of the figure) -->
+  <circle cx="58" cy="28" r="9" fill="white"/>
+  <!-- BECA text -->
+  <text x="106" y="80" font-family="Arial Black, Impact, sans-serif" font-size="72" font-weight="900" fill="#2D6A2F" letter-spacing="-1">BECA</text>
+</svg>
