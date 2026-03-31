@@ -1446,8 +1446,8 @@ img { max-width: 100%; display: block; }
    ============================================ */
 [data-aos] {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
 [data-aos].aos-animate {
@@ -1455,8 +1455,107 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
+[data-aos="fade-left"] {
+  transform: translateX(-40px);
+}
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(40px);
+}
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0);
+}
+
 [data-aos][data-aos-delay="100"] { transition-delay: 0.1s; }
 [data-aos][data-aos-delay="150"] { transition-delay: 0.15s; }
 [data-aos][data-aos-delay="200"] { transition-delay: 0.2s; }
 [data-aos][data-aos-delay="250"] { transition-delay: 0.25s; }
 [data-aos][data-aos-delay="300"] { transition-delay: 0.3s; }
+[data-aos][data-aos-delay="400"] { transition-delay: 0.4s; }
+
+/* ── Hero entrance ── */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title {
+  animation: hero-in 0.8s ease both;
+  animation-delay: 0.1s;
+}
+.hero-tagline {
+  animation: hero-in 0.8s ease both;
+  animation-delay: 0.3s;
+}
+.hero-subtitle {
+  animation: hero-in 0.8s ease both;
+  animation-delay: 0.5s;
+}
+.hero-cta {
+  animation: hero-in 0.8s ease both;
+  animation-delay: 0.65s;
+}
+.hero-stats {
+  animation: hero-in 0.8s ease both;
+  animation-delay: 0.8s;
+}
+
+/* ── Section title underline ── */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background: var(--color-orange);
+  border-radius: 2px;
+  margin-top: 10px;
+  transition: width 0.7s ease 0.2s;
+}
+.section-title.aos-animate::after,
+.section-title.title-animated::after {
+  width: 60px;
+}
+
+/* ── Button shimmer ── */
+.btn-primary {
+  overflow: hidden;
+  position: relative;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+.btn-primary:hover::after {
+  left: 125%;
+}
+
+/* ── Why card icon pulse ── */
+.why-card:hover .why-icon {
+  animation: icon-pop 0.4s ease;
+}
+@keyframes icon-pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* ── Stat number glow ── */
+.stat-number {
+  background: linear-gradient(135deg, var(--color-orange), var(--color-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

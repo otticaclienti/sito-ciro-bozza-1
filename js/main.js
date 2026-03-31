@@ -268,6 +268,21 @@ document.addEventListener('DOMContentLoaded', () => {
     whyObserver.observe(card);
   });
 
+  // ── SECTION TITLE underline animation ────────────────────────
+  const titleObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('title-animated');
+          titleObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  document.querySelectorAll('.section-title').forEach(el => titleObserver.observe(el));
+
   // ── HEADER active state ───────────────────────────────────────
   // inject active-nav CSS rule
   const styleSheet = document.createElement('style');
