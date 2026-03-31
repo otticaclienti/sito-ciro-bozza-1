@@ -386,7 +386,7 @@ img { max-width: 100%; display: block; }
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 900;
   line-height: 1.0;
-  color: #1a1a1a;
+  color: var(--color-green);
   margin-bottom: 12px;
   letter-spacing: -0.01em;
 }
