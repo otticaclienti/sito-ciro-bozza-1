@@ -85,7 +85,7 @@ img { max-width: 100%; display: block; }
 
 .section {
   padding: 100px 0;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .section-dark {
@@ -323,7 +323,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   padding-top: var(--header-h);
   background: #fff;
 }
@@ -331,7 +331,7 @@ img { max-width: 100%; display: block; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .hero-grid {
@@ -499,7 +499,7 @@ img { max-width: 100%; display: block; }
   background: var(--color-bg-dark);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  overflow: hidden;
+  overflow: clip;
 }
 
 .brands-label {
@@ -857,13 +857,13 @@ img { max-width: 100%; display: block; }
   padding: 100px 0;
   position: relative;
   background: #fff;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .ercolina-bg {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .ercolina-pattern {
@@ -1685,7 +1685,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Chi Siamo decorators ── */
-#chi-siamo { overflow: hidden; }
+#chi-siamo { overflow: clip; }
 
 #chi-siamo .deco-1 {
   width: 320px; height: 320px;
@@ -1710,7 +1710,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Prodotti decorators ── */
-#prodotti { overflow: hidden; }
+#prodotti { overflow: clip; }
 
 #prodotti .deco-1 {
   width: 400px; height: 400px;
@@ -1734,7 +1734,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Ercolina decorators ── */
-#ercolina { overflow: hidden; }
+#ercolina { overflow: clip; }
 
 #ercolina .deco-1 {
   width: 350px; height: 350px;
@@ -1751,7 +1751,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Contatti decorators ── */
-#contatti { overflow: hidden; }
+#contatti { overflow: clip; }
 
 #contatti .deco-1 {
   width: 500px; height: 500px;
