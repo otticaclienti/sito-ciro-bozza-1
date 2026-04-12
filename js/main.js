@@ -2,6 +2,13 @@
    MAIN.JS – Ciro Esposito Macchine Utensili
    ============================================ */
 
+// ── PREVENT HORIZONTAL SCROLL (iOS Safari fix) ───────────────
+window.addEventListener('scroll', () => {
+  if (window.scrollX !== 0) {
+    window.scrollTo(0, window.scrollY);
+  }
+}, { passive: true });
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── HEADER SCROLL EFFECT ──────────────────────────────────────

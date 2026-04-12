@@ -45,6 +45,7 @@ html {
   font-size: 16px;
   overflow-x: clip;
   max-width: 100%;
+  touch-action: pan-y;
 }
 
 body {
@@ -55,6 +56,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   width: 100%;
+  touch-action: pan-y;
 }
 
 a {
@@ -506,6 +508,9 @@ img { max-width: 100%; display: block; }
 .brands-track-wrapper {
   position: relative;
   overflow: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .brands-track-wrapper::before,
