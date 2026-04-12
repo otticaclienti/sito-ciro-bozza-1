@@ -71,6 +71,7 @@ img { max-width: 100%; display: block; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
 }
 
 .section {
@@ -1488,6 +1489,12 @@ img { max-width: 100%; display: block; }
   .contact-form .form-row { grid-template-columns: 1fr; }
   .about-features { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+
+  /* Prevent buttons and badges from overflowing the viewport */
+  .btn { white-space: normal; max-width: 100%; }
+  .hero-badge { white-space: normal; flex-wrap: wrap; justify-content: center; text-align: center; max-width: 100%; }
+  .ercolina-badge { white-space: normal; flex-wrap: wrap; }
+  .section-tag { white-space: normal; }
 }
 
 @media (max-width: 480px) {
