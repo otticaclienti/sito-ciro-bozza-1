@@ -2,24 +2,20 @@
    MAIN.JS – Ciro Esposito Macchine Utensili
    ============================================ */
 
-// ── PREVENT HORIZONTAL SCROLL (iOS Safari fix) ───────────────
-// Reset immediately if page is scrolled horizontally
+// ── SNAP BACK TO CENTER (iOS Safari fix) ─────────────────────
+// When the finger is lifted, snap back to scrollX = 0
+document.addEventListener('touchend', () => {
+  if (window.scrollX !== 0) {
+    window.scrollTo({ left: 0, top: window.scrollY, behavior: 'smooth' });
+  }
+}, { passive: true });
+
+// Also reset on scroll end (covers desktop and edge cases)
 window.addEventListener('scroll', () => {
-  if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
+  if (window.scrollX !== 0) {
+    window.scrollTo({ left: 0, top: window.scrollY, behavior: 'smooth' });
+  }
 }, { passive: true });
-
-// Block horizontal touch gestures at the source
-let _touchStartX = 0, _touchStartY = 0;
-document.addEventListener('touchstart', (e) => {
-  _touchStartX = e.touches[0].clientX;
-  _touchStartY = e.touches[0].clientY;
-}, { passive: true });
-
-document.addEventListener('touchmove', (e) => {
-  const dx = Math.abs(e.touches[0].clientX - _touchStartX);
-  const dy = Math.abs(e.touches[0].clientY - _touchStartY);
-  if (dx > dy) e.preventDefault(); // horizontal swipe → block it
-}, { passive: false });
 
 document.addEventListener('DOMContentLoaded', () => {
 

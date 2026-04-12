@@ -46,6 +46,13 @@ html {
   overflow-x: clip;
   max-width: 100%;
   touch-action: pan-y;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+html::-webkit-scrollbar-horizontal,
+body::-webkit-scrollbar-horizontal {
+  display: none; /* Chrome/Safari – nascondi solo la barra orizzontale */
 }
 
 body {
