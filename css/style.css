@@ -319,12 +319,12 @@ img { max-width: 100%; display: block; }
    HERO
    ============================================ */
 #hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: clip;
-  padding-top: var(--header-h);
+  padding-top: calc(var(--header-h) + 60px);
+  padding-bottom: 80px;
   background: #fff;
 }
 
