@@ -77,9 +77,9 @@ ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
   width: 100%;
 }
 
@@ -123,7 +123,7 @@ img { max-width: 100%; display: block; }
 .section-subtitle {
   font-size: 1.05rem;
   color: var(--color-text-muted);
-  max-width: 560px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -378,7 +378,7 @@ img { max-width: 100%; display: block; }
   z-index: 1;
   padding-top: 60px;
   padding-bottom: 120px;
-  max-width: 780px;
+  max-width: 900px;
 }
 
 .hero-badge {
