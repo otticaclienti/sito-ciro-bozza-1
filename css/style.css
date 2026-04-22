@@ -377,7 +377,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 1;
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -421,7 +421,7 @@ img { max-width: 100%; display: block; }
 .hero-subtitle {
   font-size: 1.1rem;
   color: var(--color-text-muted);
-  max-width: 680px;
+  max-width: 800px;
   margin-bottom: 40px;
   line-height: 1.75;
   text-align: center;
@@ -432,7 +432,7 @@ img { max-width: 100%; display: block; }
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 64px;
+  margin-bottom: 0;
 }
 
 .hero-stats {
