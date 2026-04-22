@@ -222,6 +222,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── ERCOLINA CAROUSEL ────────────────────────────────────────
+  const slides = document.getElementById('ercolinaSlides');
+  const dots = document.querySelectorAll('.ercolina-dot');
+  const prevBtn = document.getElementById('ercolinaPrev');
+  const nextBtn = document.getElementById('ercolinaNext');
+
+  if (slides && prevBtn && nextBtn) {
+    let current = 0;
+    const total = slides.children.length;
+
+    const goTo = (index) => {
+      current = (index + total) % total;
+      slides.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    };
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(dot => dot.addEventListener('click', () => goTo(+dot.dataset.index)));
+  }
+
   // ── SMOOTH SCROLL for anchor links ───────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
