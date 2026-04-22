@@ -431,6 +431,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 64px;
 }
 
