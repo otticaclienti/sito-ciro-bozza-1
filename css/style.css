@@ -761,6 +761,11 @@ img { max-width: 100%; display: block; }
   transition: transform 0.5s ease;
 }
 
+.product-img-wrap--contain img {
+  object-fit: contain;
+  background: var(--color-bg-card);
+}
+
 .product-card:hover .product-img-wrap img {
   transform: scale(1.06);
 }
