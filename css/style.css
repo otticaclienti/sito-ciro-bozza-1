@@ -378,6 +378,10 @@ img { max-width: 100%; display: block; }
   z-index: 1;
   padding-top: 60px;
   padding-bottom: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge {
@@ -417,9 +421,10 @@ img { max-width: 100%; display: block; }
 .hero-subtitle {
   font-size: 1.1rem;
   color: var(--color-text-muted);
-  max-width: 600px;
+  max-width: 680px;
   margin-bottom: 40px;
   line-height: 1.75;
+  text-align: center;
 }
 
 .hero-cta {
@@ -1617,7 +1622,7 @@ img { max-width: 100%; display: block; }
 
   .hamburger { display: flex; }
 
-  .hero-cta { flex-direction: column; align-items: flex-start; }
+  .hero-cta { flex-direction: column; align-items: center; }
   .hero-cta .btn { width: 100%; justify-content: center; }
   .hero-stats { gap: 16px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
