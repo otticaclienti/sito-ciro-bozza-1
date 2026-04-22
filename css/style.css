@@ -854,10 +854,6 @@ img { max-width: 100%; display: block; }
    ERCOLINA SECTION
    ============================================ */
 /* ── Ercolina - Pedrazzoli mini-site ── */
---erc-red: #C8102E;
---erc-dark: #0A1628;
---erc-dark2: #111f33;
-
 .section-ercolina-mini {
   background: #0A1628;
   color: #fff;
