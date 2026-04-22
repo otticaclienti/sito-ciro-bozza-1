@@ -377,8 +377,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 1;
   padding-top: 60px;
-  padding-bottom: 120px;
-  max-width: 900px;
+  padding-bottom: 80px;
 }
 
 .hero-badge {
