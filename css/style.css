@@ -886,10 +886,16 @@ img { max-width: 100%; display: block; }
 
 .ercolina-mini-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 72px;
   align-items: center;
   padding: 80px 0;
+}
+
+.ercolina-mini-text,
+.ercolina-carousel-col {
+  min-width: 0;
+  overflow: hidden;
 }
 
 /* LEFT */
@@ -996,6 +1002,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
+  width: 100%;
 }
 
 .ercolina-slides {
