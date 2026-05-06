@@ -1592,6 +1592,23 @@ img { max-width: 100%; display: block; }
     width: 100%;
     border-radius: var(--radius);
   }
+
+  /* Centra i testi delle sezioni Chi Siamo ed Ercolina quando il layout
+     collassa a colonna singola (immagine sopra, testo sotto). */
+  .about-text,
+  .ercolina-mini-text {
+    text-align: center;
+  }
+  .about-text .section-title::after,
+  .ercolina-mini-text .section-title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-feature,
+  .ercolina-mini-feature {
+    justify-content: center;
+    text-align: left;
+  }
 }
 
 @media (max-width: 768px) {
