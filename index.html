@@ -36,8 +36,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Structured Data: Organization + LocalBusiness -->
@@ -106,7 +108,7 @@
   <header id="header">
     <div class="container header-inner">
       <a href="#" class="logo">
-        <img src="img/logo-beca.png" alt="BECA – Ciro Benedetto" class="logo-img" />
+        <img src="img/logo-beca.png" alt="BECA – Ciro Benedetto" class="logo-img" fetchpriority="high" decoding="async" />
       </a>
       <nav id="nav">
         <ul>
@@ -162,47 +164,47 @@
     </div>
     <div class="brands-track-wrapper">
       <div class="brands-track" id="brandsTrack">
-        <div class="brand-item"><img src="img/marchi/ercolina-pedrazzoli.jpeg" alt="Ercolina / IBP Pedrazzoli" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/gilardi.png" alt="Gilardi" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/mep.png" alt="MEP" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/cutlite-penta.jpeg" alt="Cutlite Penta" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/imcar.jpeg" alt="IMCAR" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/garboli.jpeg" alt="Garboli" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/emc.jpeg" alt="EMC Metal Division" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/btm.jpeg" alt="BTM" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/waterjet.png" alt="Waterjet Corporation" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/kaeser.jpeg" alt="Kaeser Compressori" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/promotech.png" alt="Promotech" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/putsch-meniconi.jpeg" alt="Putsch Meniconi" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/rimas.jpeg" alt="Rimas 3D Solutions" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/nullus.png" alt="Nullus" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/aceti.png" alt="Aceti Macchine" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/bimak.png" alt="Bimak" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/automa.png" alt="Automa" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/bianco.png" alt="Bianco Segatrici a Nastro" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/dimastlogo.jpg" alt="Dimast" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/ciampalinilogo.jpg" alt="Ciampalini" class="brand-logo" /></div>
+        <div class="brand-item"><img src="img/marchi/ercolina-pedrazzoli.jpeg" alt="Ercolina / IBP Pedrazzoli" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/gilardi.png" alt="Gilardi" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/mep.png" alt="MEP" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/cutlite-penta.jpeg" alt="Cutlite Penta" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/imcar.jpeg" alt="IMCAR" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/garboli.jpeg" alt="Garboli" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/emc.jpeg" alt="EMC Metal Division" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/btm.jpeg" alt="BTM" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/waterjet.png" alt="Waterjet Corporation" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/kaeser.jpeg" alt="Kaeser Compressori" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/promotech.png" alt="Promotech" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/putsch-meniconi.jpeg" alt="Putsch Meniconi" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/rimas.jpeg" alt="Rimas 3D Solutions" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/nullus.png" alt="Nullus" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/aceti.png" alt="Aceti Macchine" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/bimak.png" alt="Bimak" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/automa.png" alt="Automa" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/bianco.png" alt="Bianco Segatrici a Nastro" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/dimastlogo.jpg" alt="Dimast" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/ciampalinilogo.jpg" alt="Ciampalini" class="brand-logo" loading="lazy" decoding="async" /></div>
         <!-- duplicate set for infinite loop -->
-        <div class="brand-item"><img src="img/marchi/ercolina-pedrazzoli.jpeg" alt="Ercolina / IBP Pedrazzoli" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/gilardi.png" alt="Gilardi" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/mep.png" alt="MEP" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/cutlite-penta.jpeg" alt="Cutlite Penta" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/imcar.jpeg" alt="IMCAR" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/garboli.jpeg" alt="Garboli" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/emc.jpeg" alt="EMC Metal Division" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/btm.jpeg" alt="BTM" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/waterjet.png" alt="Waterjet Corporation" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/kaeser.jpeg" alt="Kaeser Compressori" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/promotech.png" alt="Promotech" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/putsch-meniconi.jpeg" alt="Putsch Meniconi" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/rimas.jpeg" alt="Rimas 3D Solutions" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/nullus.png" alt="Nullus" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/aceti.png" alt="Aceti Macchine" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/bimak.png" alt="Bimak" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/automa.png" alt="Automa" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/bianco.png" alt="Bianco Segatrici a Nastro" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/dimastlogo.jpg" alt="Dimast" class="brand-logo" /></div>
-        <div class="brand-item"><img src="img/marchi/ciampalinilogo.jpg" alt="Ciampalini" class="brand-logo" /></div>
+        <div class="brand-item"><img src="img/marchi/ercolina-pedrazzoli.jpeg" alt="Ercolina / IBP Pedrazzoli" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/gilardi.png" alt="Gilardi" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/mep.png" alt="MEP" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/cutlite-penta.jpeg" alt="Cutlite Penta" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/imcar.jpeg" alt="IMCAR" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/garboli.jpeg" alt="Garboli" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/emc.jpeg" alt="EMC Metal Division" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/btm.jpeg" alt="BTM" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/waterjet.png" alt="Waterjet Corporation" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/kaeser.jpeg" alt="Kaeser Compressori" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/promotech.png" alt="Promotech" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/putsch-meniconi.jpeg" alt="Putsch Meniconi" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/rimas.jpeg" alt="Rimas 3D Solutions" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/nullus.png" alt="Nullus" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/aceti.png" alt="Aceti Macchine" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/bimak.png" alt="Bimak" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/automa.png" alt="Automa" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/bianco.png" alt="Bianco Segatrici a Nastro" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/dimastlogo.jpg" alt="Dimast" class="brand-logo" loading="lazy" decoding="async" /></div>
+        <div class="brand-item"><img src="img/marchi/ciampalinilogo.jpg" alt="Ciampalini" class="brand-logo" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -216,7 +218,7 @@
       <div class="about-grid">
         <div class="about-visual" data-aos="fade-left">
           <div class="about-img-wrapper">
-            <img src="img/agente.jpg" alt="Agente macchine utensili" class="about-photo" />
+            <img src="img/agente.jpg" alt="Agente macchine utensili" class="about-photo" loading="lazy" decoding="async" />
             <div class="about-shape-1"></div>
             <div class="about-shape-2"></div>
           </div>
@@ -276,7 +278,7 @@
 
         <div class="product-card" data-aos="fade-up">
           <div class="product-img-wrap">
-            <img src="img/prodotti/pressa.jpg" alt="Presse Piegatrici e Cesoie" />
+            <img src="img/prodotti/pressa.jpg" alt="Presse Piegatrici e Cesoie" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Presse Piegatrici e Cesoie</h3>
@@ -292,7 +294,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="100">
           <div class="product-img-wrap">
-            <img src="img/prodotti/isole-robotizzate.jpg" alt="Isole robotizzate" />
+            <img src="img/prodotti/isole-robotizzate.jpg" alt="Isole robotizzate" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Isole robotizzate</h3>
@@ -308,7 +310,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="150">
           <div class="product-img-wrap">
-            <img src="img/prodotti/curvatrice.jpg" alt="Macchine curvatrici" />
+            <img src="img/prodotti/curvatrice.jpg" alt="Macchine curvatrici" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Macchine curvatrici: Calandra per lamiera e Profilati</h3>
@@ -324,7 +326,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="200">
           <div class="product-img-wrap product-img-wrap--contain">
-            <img src="img/prodotti/punzonatrice.jpg" alt="Punzonatrici e Tranciatrici" />
+            <img src="img/prodotti/punzonatrice.jpg" alt="Punzonatrici e Tranciatrici" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Punzonatrici e Tranciatrici</h3>
@@ -340,7 +342,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="250">
           <div class="product-img-wrap">
-            <img src="img/prodotti/taglio-termico.jpg" alt="Macchine a taglio termico" />
+            <img src="img/prodotti/taglio-termico.jpg" alt="Macchine a taglio termico" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Macchine a taglio termico: Laser, Plasma e Ossitaglio</h3>
@@ -357,7 +359,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="100">
           <div class="product-img-wrap">
-            <img src="img/prodotti/waterjet.jpg" alt="Macchine Waterjet" />
+            <img src="img/prodotti/waterjet.jpg" alt="Macchine Waterjet" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Macchine Waterjet</h3>
@@ -373,7 +375,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="150">
           <div class="product-img-wrap">
-            <img src="img/prodotti/officina.jpg" alt="Officine Meccaniche" />
+            <img src="img/prodotti/officina.jpg" alt="Officine Meccaniche" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Officine Meccaniche</h3>
@@ -389,7 +391,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="200">
           <div class="product-img-wrap">
-            <img src="img/prodotti/levigatura.jpg" alt="Macchine per Levigatura e Finitura" />
+            <img src="img/prodotti/levigatura.jpg" alt="Macchine per Levigatura e Finitura" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Macchine per Levigatura e Finitura</h3>
@@ -405,7 +407,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="250">
           <div class="product-img-wrap">
-            <img src="img/prodotti/segatrice.jpg" alt="Segatrici a Nastro e a Disco" />
+            <img src="img/prodotti/segatrice.jpg" alt="Segatrici a Nastro e a Disco" loading="lazy" decoding="async" />
           </div>
           <div class="product-card-body">
           <h3>Segatrici a Nastro e a Disco</h3>
@@ -476,7 +478,7 @@
 
               <div class="ercolina-slide">
                 <div class="ercolina-slide-img" id="erc-img-0">
-                  <img src="img/ercolina/curvatubi-senzanima.jpg" alt="Curvatubi Senz'Anima" />
+                  <img src="img/ercolina/curvatubi-senzanima.jpg" alt="Curvatubi Senz'Anima" loading="lazy" decoding="async" />
                 </div>
                 <div class="ercolina-slide-body">
                   <span class="ercolina-slide-tag">Curvatubi</span>
@@ -488,7 +490,7 @@
 
               <div class="ercolina-slide">
                 <div class="ercolina-slide-img" id="erc-img-1">
-                  <img src="img/ercolina/curvatubi-conanima.jpg" alt="Curvatubi con Anima" />
+                  <img src="img/ercolina/curvatubi-conanima.jpg" alt="Curvatubi con Anima" loading="lazy" decoding="async" />
                 </div>
                 <div class="ercolina-slide-body">
                   <span class="ercolina-slide-tag">Curvatubi</span>
@@ -500,7 +502,7 @@
 
               <div class="ercolina-slide">
                 <div class="ercolina-slide-img" id="erc-img-2">
-                  <img src="img/ercolina/centinatrice.jpg" alt="Centinatrice" />
+                  <img src="img/ercolina/centinatrice.jpg" alt="Centinatrice" loading="lazy" decoding="async" />
                 </div>
                 <div class="ercolina-slide-body">
                   <span class="ercolina-slide-tag">Curvaprofili</span>
@@ -512,7 +514,7 @@
 
               <div class="ercolina-slide">
                 <div class="ercolina-slide-img" id="erc-img-3">
-                  <img src="img/ercolina/curvatubi-fullelectric.jpg" alt="Pressa Orizzontale" />
+                  <img src="img/ercolina/curvatubi-fullelectric.jpg" alt="Pressa Orizzontale" loading="lazy" decoding="async" />
                 </div>
                 <div class="ercolina-slide-body">
                   <span class="ercolina-slide-tag">Deformazione</span>
@@ -524,7 +526,7 @@
 
               <div class="ercolina-slide">
                 <div class="ercolina-slide-img" id="erc-img-4">
-                  <img src="img/ercolina/pressa-orizzontale.jpg" alt="Curvatubi con Anima Full Electric" />
+                  <img src="img/ercolina/pressa-orizzontale.jpg" alt="Curvatubi con Anima Full Electric" loading="lazy" decoding="async" />
                 </div>
                 <div class="ercolina-slide-body">
                   <span class="ercolina-slide-tag">Curvatubi</span>
@@ -644,7 +646,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#" class="logo logo-footer">
-          <img src="img/logo-beca.png" alt="BECA – Ciro Benedetto" class="logo-img logo-img-footer" />
+          <img src="img/logo-beca.png" alt="BECA – Ciro Benedetto" class="logo-img logo-img-footer" loading="lazy" decoding="async" />
         </a>
         <p>Commercializzazione e rappresentanza di macchine utensili per la carpenteria metallica e la lavorazione dei metalli, selezionate tra aziende italiane e internazionali con consolidata esperienza.</p>
       </div>
