@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cirobenedetto.it/sitemap.xml
+Sitemap: https://becamacchineutensili.it/sitemap.xml
