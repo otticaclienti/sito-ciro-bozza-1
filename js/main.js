@@ -176,13 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled = true;
       btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Invio in corso...';
 
+      // Lettura sicura dei campi (evita errori se un campo manca)
+      const val = (name) => (form.elements[name] ? form.elements[name].value.trim() : '');
+
       const data = {
-        nome:       form.nome.value.trim(),
-        azienda:    form.azienda.value.trim(),
-        telefono:   form.telefono.value.trim(),
-        email:      form.email.value.trim(),
-        interesse:  form.interesse.value,
-        messaggio:  form.messaggio.value.trim(),
+        nome:       val('nome'),
+        azienda:    val('azienda'),
+        telefono:   val('telefono'),
+        email:      val('email'),
+        messaggio:  val('messaggio'),
         data:       new Date().toLocaleString('it-IT')
       };
 
