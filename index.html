@@ -4,6 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <meta name="theme-color" content="#ffffff" />
+
+  <!-- ===== Google Analytics 4 (con Consent Mode) ===== -->
+  <script>
+    // >>> INSERIRE QUI L'ID DI MISURAZIONE GA4 (formato G-XXXXXXXXXX) <<<
+    var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    // Di default neghiamo i cookie analitici finché l'utente non accetta (GDPR)
+    gtag('consent', 'default', { 'analytics_storage': 'denied', 'ad_storage': 'denied' });
+    gtag('js', new Date());
+
+    // Carica GA solo se è stato configurato un ID reale
+    if (GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.indexOf('XXXX') === -1) {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      document.head.appendChild(gaScript);
+      gtag('config', GA_MEASUREMENT_ID, { 'anonymize_ip': true });
+    }
+  </script>
+
   <title>BECA Macchine Utensili | Rivenditore Ufficiale Ercolina - Pedrazzoli | Ciro Benedetto</title>
   <meta name="description" content="BECA di Ciro Benedetto: commercio e rappresentanza di macchine utensili per carpenteria metallica e lavorazione dei metalli. Partner ufficiale Ercolina - Pedrazzoli. Presse piegatrici, curvatubi, taglio laser, plasma, waterjet." />
   <meta name="keywords" content="BECA, BECA macchine utensili, Ciro Benedetto, macchine utensili, carpenteria metallica, lavorazione metalli, Ercolina, Pedrazzoli, curvatubi, presse piegatrici, taglio laser, taglio plasma, waterjet, rappresentanza macchine utensili" />
@@ -700,6 +722,18 @@
   <a href="https://wa.me/393382446050" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contattaci su WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+  <!-- ===== Banner Cookie ===== -->
+  <div id="cookieBanner" class="cookie-banner" style="display:none;" role="dialog" aria-live="polite" aria-label="Informativa cookie">
+    <p class="cookie-text">
+      Questo sito utilizza cookie tecnici e, previo consenso, cookie analitici per misurare le visite.
+      Puoi accettare o rifiutare i cookie analitici.
+    </p>
+    <div class="cookie-actions">
+      <button id="cookieReject" type="button" class="btn btn-outline cookie-btn">Rifiuta</button>
+      <button id="cookieAccept" type="button" class="btn btn-primary cookie-btn">Accetta</button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
