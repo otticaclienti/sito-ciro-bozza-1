@@ -181,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
         azienda:    form.azienda.value.trim(),
         telefono:   form.telefono.value.trim(),
         email:      form.email.value.trim(),
-        interesse:  form.interesse.value,
         messaggio:  form.messaggio.value.trim(),
         data:       new Date().toLocaleString('it-IT')
       };
