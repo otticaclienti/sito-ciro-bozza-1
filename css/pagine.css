@@ -135,3 +135,101 @@
   .compare-table th,
   .compare-table td { padding: 10px 8px; font-size: 0.85rem; }
 }
+
+/* ── Hero generico (pagine non Ercolina) ── */
+.page-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(240,112,0,0.15);
+  border: 1px solid rgba(240,112,0,0.4);
+  color: #ffa04d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 20px;
+  max-width: 820px;
+}
+
+/* ── Immagine + elenco ── */
+.page-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+.page-split-img img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: block;
+}
+.page-split-text { padding: 0; }
+.page-split-text .btn { align-self: flex-start; }
+.page-list { margin: 8px 0 28px; }
+.page-list li {
+  padding: 8px 0 8px 22px;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+.page-list li::before {
+  content: '›';
+  position: absolute;
+  left: 4px;
+  color: var(--color-orange);
+  font-weight: 700;
+}
+.page-list a,
+.page-text a,
+.faq-list a { color: var(--color-orange); font-weight: 600; }
+
+/* ── Altre categorie / anteprima ── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.related-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.related-card:hover {
+  border-color: var(--color-orange-border);
+  transform: translateY(-2px);
+}
+.related-card img {
+  width: 72px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .page-split { grid-template-columns: 1fr; gap: 32px; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .related-grid { grid-template-columns: 1fr; }
+}
