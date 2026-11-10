@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20261110" />
   <link rel="stylesheet" href="css/pagine.css" />
 
   <script type="application/ld+json">
@@ -93,7 +93,22 @@
       <nav id="nav">
         <ul>
           <li><a href="./#chi-siamo">Chi Siamo</a></li>
-          <li><a href="./#prodotti">Prodotti</a></li>
+          <li class="nav-dropdown">
+            <a href="./#prodotti">Prodotti</a>
+            <button class="nav-dropdown-toggle" type="button" aria-label="Mostra i prodotti" aria-expanded="false"><span></span></button>
+            <ul class="nav-submenu">
+              <li><a href="presse-piegatrici-cesoie.html">Presse Piegatrici e Cesoie</a></li>
+              <li><a href="isole-robotizzate.html">Isole Robotizzate</a></li>
+              <li><a href="calandre-curvaprofili.html">Calandre e Curvaprofili</a></li>
+              <li><a href="punzonatrici-tranciatrici.html" aria-current="page">Punzonatrici e Tranciatrici</a></li>
+              <li><a href="taglio-laser-plasma.html">Taglio Laser, Plasma e Ossitaglio</a></li>
+              <li><a href="waterjet.html">Macchine Waterjet</a></li>
+              <li><a href="macchine-officina-meccanica.html">Officine Meccaniche</a></li>
+              <li><a href="levigatrici-sbavatrici.html">Levigatura e Finitura</a></li>
+              <li><a href="segatrici.html">Segatrici a Nastro e a Disco</a></li>
+              <li><a href="curvatubi-ercolina.html">Curvatubi Ercolina - Pedrazzoli</a></li>
+            </ul>
+          </li>
           <li><a href="./#ercolina">Ercolina - Pedrazzoli</a></li>
           <li><a href="#contatti" class="btn-nav">Contatti</a></li>
         </ul>
@@ -357,6 +372,6 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <script src="js/main.js?v=20260615"></script>
+  <script src="js/main.js?v=20261110"></script>
 </body>
 </html>

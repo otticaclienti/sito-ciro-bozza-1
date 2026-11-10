@@ -73,6 +73,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ── TENDINA "PRODOTTI" ───────────────────────────────────────
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const item = btn.closest('.nav-dropdown');
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-dropdown.open').forEach(item => {
+      if (!item.contains(e.target)) {
+        item.classList.remove('open');
+        item.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
   // ── SCROLL-TO-SECTION (active nav highlight) ──────────────────
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('#nav a[href^="#"]');

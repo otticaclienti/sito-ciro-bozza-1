@@ -1946,3 +1946,116 @@ img { max-width: 100%; display: block; }
 .product-card h3 a { color: inherit; transition: color var(--transition); }
 .product-card h3 a:hover { color: var(--color-orange); }
 .product-img-wrap > a { display: block; width: 100%; height: 100%; }
+
+/* ── Tendina "Prodotti" nel menu ── */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-toggle {
+  width: 28px;
+  height: 28px;
+  margin-left: -10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.nav-dropdown-toggle span {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--color-text-muted);
+  border-bottom: 2px solid var(--color-text-muted);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--transition), border-color var(--transition);
+}
+.nav-dropdown.open .nav-dropdown-toggle span { transform: translateY(2px) rotate(-135deg); }
+.nav-dropdown-toggle:hover span,
+.nav-dropdown.open .nav-dropdown-toggle span { border-color: var(--color-orange); }
+
+#nav .nav-submenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translate(-50%, 6px);
+  width: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 8px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1001;
+}
+/* ponte invisibile tra la voce e la tendina, per non chiuderla passando col mouse */
+#nav .nav-submenu::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: -12px;
+  height: 12px;
+}
+#nav .nav-submenu a {
+  display: block;
+  padding: 9px 12px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text);
+  border-radius: 8px;
+  background: none;
+}
+#nav .nav-submenu a:hover,
+#nav .nav-submenu a[aria-current="page"] {
+  color: var(--color-orange);
+  background: var(--color-orange-light);
+}
+
+#nav .nav-dropdown.open > .nav-submenu,
+#nav .nav-dropdown:has(:focus-visible) > .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+@media (hover: hover) and (min-width: 769px) {
+  #nav .nav-dropdown:hover > .nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  #nav { max-height: calc(100vh - var(--header-h)); overflow-y: auto; }
+  .nav-dropdown { flex-wrap: wrap; }
+  .nav-dropdown > a { flex: 1; }
+  .nav-dropdown-toggle { width: 48px; height: 48px; margin-left: 0; }
+  #nav .nav-submenu {
+    position: static;
+    width: 100%;
+    transform: none;
+    display: none;
+    grid-template-columns: 1fr;
+    padding: 4px 0 8px 16px;
+    border: none;
+    border-left: 2px solid var(--color-orange-border);
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  #nav .nav-submenu::before { display: none; }
+  #nav .nav-dropdown.open > .nav-submenu { display: grid; transform: none; }
+  #nav .nav-dropdown:has(:focus-visible) > .nav-submenu { transform: none; }
+  #nav .nav-submenu a { padding: 10px 12px; font-size: 0.95rem; }
+}
