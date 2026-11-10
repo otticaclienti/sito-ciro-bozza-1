@@ -1941,3 +1941,8 @@ img { max-width: 100%; display: block; }
 .contact-info-card h3 {
   color: var(--color-green);
 }
+
+/* Titoli e foto delle schede prodotto collegati alle pagine dedicate */
+.product-card h3 a { color: inherit; transition: color var(--transition); }
+.product-card h3 a:hover { color: var(--color-orange); }
+.product-img-wrap > a { display: block; width: 100%; height: 100%; }
