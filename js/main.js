@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── CONTACT FORM → Google Sheets ─────────────────────────────
   // SOSTITUIRE con l'URL del tuo Google Apps Script (vedi istruzioni)
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzQ6huFWFbYq9nUPLyxzSZYXkozrHQngjAK8GIYAwmszecbmUDMxMRPftfy-QhPUFch/exec';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9M5Cxau5jQAbvKyW6NN5C6rO4qMI8WVOW9SbvLevGnKjP5PBBi3QjFuTdKcQaKayx/exec';
 
   const form = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
