@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
         telefono:   form.telefono.value.trim(),
         email:      form.email.value.trim(),
         messaggio:  form.messaggio.value.trim(),
+        pagina:     document.title.split('|')[0].trim(),
         data:       new Date().toLocaleString('it-IT')
       };
 
