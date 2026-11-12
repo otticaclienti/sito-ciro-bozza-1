@@ -3,6 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <!-- Tag Google + consenso cookie (Consent Mode v2) – BECA -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    (function () {
+      try {
+        var c = JSON.parse(localStorage.getItem('beca_consenso_cookie') || 'null');
+        if (c && c.scelta === 'accetta' && Date.now() - c.data < 15552000000) {
+          gtag('consent', 'update', {
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted',
+            analytics_storage: 'granted'
+          });
+        }
+      } catch (e) {}
+    })();
+    gtag('js', new Date());
+    dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WML79BP8"></script>
   <meta name="theme-color" content="#ffffff" />
   <title>BECA Macchine Utensili | Rivenditore Ufficiale Ercolina - Pedrazzoli | Ciro Benedetto</title>
   <meta name="description" content="BECA di Ciro Benedetto: commercio e rappresentanza di macchine utensili per carpenteria metallica e lavorazione dei metalli. Partner ufficiale Ercolina - Pedrazzoli. Presse piegatrici, curvatubi, taglio laser, plasma, waterjet." />
@@ -674,7 +702,7 @@
             </div>
             <div class="form-check">
               <input type="checkbox" id="privacy" name="privacy" required />
-              <label for="privacy">Ho letto e accetto la <a href="#">Privacy Policy</a></label>
+              <label for="privacy">Ho letto e accetto la <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a></label>
             </div>
             <button type="submit" class="btn btn-primary btn-full">
               <i class="fa-solid fa-paper-plane"></i> Invia Richiesta
@@ -732,7 +760,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2025 BECA – Ciro Benedetto. P.IVA: 05389741215 | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2025 BECA – Ciro Benedetto. P.IVA: 05389741215 | <a href="privacy-policy.html">Privacy Policy</a> | <a href="#" data-cookie-preferenze>Preferenze cookie</a></p>
       </div>
     </div>
   </footer>
@@ -742,6 +770,7 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <script src="js/main.js?v=20261112"></script>
+  <script src="js/tracciamento.js?v=20261112" defer></script>
+  <script src="js/main.js?v=20261113"></script>
 </body>
 </html>

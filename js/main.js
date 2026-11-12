@@ -191,6 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
+      // Conversione Google Ads + evento GA4: richiesta inviata dal modulo
+      if (window.becaTraccia) window.becaTraccia('modulo');
+
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Invio in corso...';
@@ -265,7 +268,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── SMOOTH SCROLL for anchor links ───────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const href = anchor.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const offset = parseInt(getComputedStyle(document.documentElement)

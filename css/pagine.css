@@ -233,3 +233,16 @@
 @media (max-width: 560px) {
   .related-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Pagina privacy ── */
+.page-privacy h2 { margin-top: 36px; }
+.page-privacy h2:first-child { margin-top: 0; }
+.page-privacy ul {
+  list-style: disc;
+  padding-left: 22px;
+  margin-bottom: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+.page-privacy li { margin-bottom: 10px; }
+.page-privacy a { word-break: break-word; }
